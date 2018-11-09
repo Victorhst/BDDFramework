@@ -7,35 +7,35 @@ import org.openqa.selenium.NoSuchFrameException;
 import es.indra.testes.akira.page.PageObject;
 
 /**
- * Testes automatizados s„o muito suscetÌveis ‡ diversas exceÁıes e alguns erros durante a execuÁ„o.
- * Essa classe tem como objetivo mapear e tratar os mais diversos tipos de exceÁ„o encontrados
- * durante os testes utilizando um ˙nico metodo; destarte, evitando a repetiÁ„o de cÛdigo e
+ * Testes automatizados s√£o muito suscet√≠veis √† diversas exce√ß√µes e alguns erros durante a execu√ß√£o.
+ * Essa classe tem como objetivo mapear e tratar os mais diversos tipos de exce√ß√£o encontrados
+ * durante os testes utilizando um √∫nico metodo; destarte, evitando a repeti√ß√£o de c√≥digo e
  * tornando o framework de teste mais coeso.
  * 
- * @author victor.teixeira@receita.pb.gov.br
- * @author vhsilvat@indracompany.com
+ * @author ...
+ * @author ...
  *
  */
 public class Excecoes extends PageObject {
 
 	String codigoExcecao = "";
 
-	public static final String ELEMENTO_NAO_ENCONTRADO = "Elemento, bot„o ou campo n„o encontrados na p·gina.";
-	public static final String ELEMENTO_INVISIVEL = "Elemento, bot„o ou campo inalcanÁ·veis ou invisÌveis.";
-	public static final String FRAME_NAO_ENCONTRADO = "iFrame n„o encontrado na p·gina";
-	public static final String NAO_EXISTEM_OCORRENCIAS = "N„o existem ocorrÍncias para a consulta, ";
-	public static final String DADOS_INCONSISTENTES = "Inconsistencia durante a verificaÁ„o com os dados informados.";
-	public static final String ERRO_DURANTE_EXECUCAO = "Erro durante a execuÁ„o do teste, ";
-	public static final String CAMPO_OBRIGATORIO = "Campo de preenchimento obrigatÛrio, ";
-	public static final String ACESSO_NAO_AUTORIZADO = "Acesso ‡ funcionalidade n„o autorizado para este usu·rio, ";
+	public static final String ELEMENTO_NAO_ENCONTRADO = "Elemento, bot√£o ou campo n√£o encontrados na p√°gina.";
+	public static final String ELEMENTO_INVISIVEL = "Elemento, bot√£o ou campo inalcan√ß√°veis ou invis√≠veis.";
+	public static final String FRAME_NAO_ENCONTRADO = "iFrame n√£o encontrado na p√°gina";
+	public static final String NAO_EXISTEM_OCORRENCIAS = "N√£o existem ocorr√™ncias para a consulta, ";
+	public static final String DADOS_INCONSISTENTES = "Inconsistencia durante a verifica√ß√£o com os dados informados.";
+	public static final String ERRO_DURANTE_EXECUCAO = "Erro durante a execu√ß√£o do teste, ";
+	public static final String CAMPO_OBRIGATORIO = "Campo de preenchimento obrigat√≥rio, ";
+	public static final String ACESSO_NAO_AUTORIZADO = "Acesso √† funcionalidade n√£o autorizado para este usu√°rio, ";
 	public static final String REGISTRO_DUPLICADO = "Registro duplicado, ";
-	public static final String REGISTRO_JA_CADASTRADO = "Registro j· cadastrado, ";
+	public static final String REGISTRO_JA_CADASTRADO = "Registro j√° cadastrado, ";
 	public static final String ERRO_ACESSO_SISTEMA = "Ocorreu um erro de acesso no sistema, "; // 1026
 
 	/**
-	 * Este mÈtodo captura a URL em caso de redirecionamento ou em casos de
-	 * falha durante a localizaÁ„o de algum elemento de p·gina, e ent„o retorna,
-	 * caso haja, o cÛdigo do erro que o sistema ATF lanÁa.
+	 * Este m√©todo captura a URL em caso de redirecionamento ou em casos de
+	 * falha durante a localiza√ß√£o de algum elemento de p√°gina, e ent√£o retorna,
+	 * caso haja, o c√≥digo do erro que o sistema ATF lan√ßa.
 	 */
 	public void getCodigoUrl() {
 
@@ -54,8 +54,8 @@ public class Excecoes extends PageObject {
 	}
 
 	/**
-	 * Tratamento de exceÁ„o genÈrica, com base no cÛdigo de erro do ATF.
-	 * Retorna a mensagem contida no cÛdigo, juntamente com o stacktrace.
+	 * Tratamento de exce√ß√£o gen√©rica, com base no c√≥digo de erro do ATF.
+	 * Retorna a mensagem contida no c√≥digo, juntamente com o stacktrace.
 	 * 
 	 * @param e
 	 * @throws Exception
@@ -91,8 +91,8 @@ public class Excecoes extends PageObject {
 	}
 
 	/**
-	 * Tratamento de erro ao tentar localizar um elemento de p·gina. Retorna uma
-	 * mensagem informando a falha na localizaÁ„o do elemento, juntamente com o
+	 * Tratamento de erro ao tentar localizar um elemento de p√°gina. Retorna uma
+	 * mensagem informando a falha na localiza√ß√£o do elemento, juntamente com o
 	 * stacktrace.
 	 * 
 	 * @param e
@@ -141,8 +141,8 @@ public class Excecoes extends PageObject {
 	}
 
 	/**
-	 * Tratamento de erro ao tentar localizar um iframe na p·gina. Retorna uma
-	 * mensagem informando a falha na localizaÁ„o do frame, juntamente com o
+	 * Tratamento de erro ao tentar localizar um iframe na p√°gina. Retorna uma
+	 * mensagem informando a falha na localiza√ß√£o do frame, juntamente com o
 	 * stacktrace.
 	 * 
 	 * @param e
@@ -154,7 +154,7 @@ public class Excecoes extends PageObject {
 	}
 
 	/**
-	 * Tratamento de erro ao tentar localizar um elemento invisÌvel ou ainda n„o
+	 * Tratamento de erro ao tentar localizar um elemento invis√≠vel ou ainda n√£o
 	 * carregado. Retorna uma mensagem informando a invisibilidade do elemento,
 	 * juntamente com o stacktrace.
 	 * 
@@ -167,10 +167,10 @@ public class Excecoes extends PageObject {
 	}
 
 	/**
-	 * Com base na subclasse de exceÁ„o capturada, este mÈtodo retorna a exceÁ„o
-	 * especÌfica devidamente tratada, com uma mensagem informando o erro e o
-	 * stacktrace da exceÁ„o. Subclasses diretamente ligadas a superclasse Throwable
-	 * s„o as classes Error e Exception.
+	 * Com base na subclasse de exce√ß√£o capturada, este m√©todo retorna a exce√ß√£o
+	 * espec√≠fica devidamente tratada, com uma mensagem informando o erro e o
+	 * stacktrace da exce√ß√£o. Subclasses diretamente ligadas a superclasse Throwable
+	 * s√£o as classes Error e Exception.
 	 * 
 	 * @param e
 	 * @throws Throwable
