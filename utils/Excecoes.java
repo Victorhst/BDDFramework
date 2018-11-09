@@ -20,6 +20,7 @@ public class Excecoes extends PageObject {
 
 	String codigoExcecao = "";
 
+	public static final String ELEMENTO_INEXISTENTE = "Elemento de página inexistente ou não mapeado.";
 	public static final String ELEMENTO_NAO_ENCONTRADO = "Elemento, botão ou campo não encontrados na página.";
 	public static final String ELEMENTO_INVISIVEL = "Elemento, botão ou campo inalcançáveis ou invisíveis.";
 	public static final String FRAME_NAO_ENCONTRADO = "iFrame não encontrado na página";
@@ -44,7 +45,7 @@ public class Excecoes extends PageObject {
 
 		if (value.length() < 73) {
 
-			codigoExcecao = null;
+			codigoExcecao = value;
 
 		} else {
 
@@ -85,8 +86,8 @@ public class Excecoes extends PageObject {
 		} else if (codigoExcecao != "" && codigoExcecao.contains("codigo")) {
 			throw new Exception(ERRO_DURANTE_EXECUCAO + codigoExcecao, e);
 
-		} else if (codigoExcecao == null) {
-			throw new Exception(ELEMENTO_NAO_ENCONTRADO, e);
+		} else if (!codigoExcecao.contains("codigo")) {
+			throw new Exception(ELEMENTO_INEXISTENTE, e);
 		}
 	}
 
@@ -123,8 +124,8 @@ public class Excecoes extends PageObject {
 		} else if (codigoExcecao != "" && codigoExcecao.contains("codigo")) {
 			throw new NoSuchElementException(ERRO_DURANTE_EXECUCAO + codigoExcecao, e);
 
-		} else if (codigoExcecao == null) {
-			throw new NoSuchElementException(ELEMENTO_NAO_ENCONTRADO, e);
+		} else if (!codigoExcecao.contains("codigo")) {
+			throw new NoSuchElementException(ELEMENTO_INEXISTENTE, e);
 		}
 	}
 
@@ -151,6 +152,11 @@ public class Excecoes extends PageObject {
 	public void retornarFrameNaoEncontrato(Throwable e) throws NoSuchFrameException {
 
 		throw new NoSuchFrameException(FRAME_NAO_ENCONTRADO, e);
+	}
+	
+	public void retornarElementoInexistente(Throwable e) throws NullPointerException {
+		
+		
 	}
 
 	/**
