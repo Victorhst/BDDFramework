@@ -10,12 +10,12 @@ import org.openqa.selenium.WebElement;
 import es.indra.testes.akira.page.PageObject;
 
 /**
- * Classe com mÈtodos que se repetem constantemente durante a implementaÁ„o das classes Page.
- * Possui tambÈm mÈtodos que auxiliam as implementaÁıes tornando-as menos verbosas
+ * Classe com m√©todos que se repetem constantemente durante a implementa√ß√£o das classes Page.
+ * Possui tamb√©m m√©todos que auxiliam as implementa√ß√µes tornando-as menos verbosas
  * e mais intuitivas.
- * <p>
- * @author victor.teixeira@receita.pb.gov.br
- * @author vhsilvat@indracompany.com
+ * 
+ * @author ...
+ * @author ...
  *
  */
 public class Utils extends PageObject {
@@ -25,15 +25,15 @@ public class Utils extends PageObject {
 	}
 	
 	/**
-	 * O geckodriver n„o suporta os Actions Handlers.
-	 * Este mÈtodo, portanto, alterna o handler da janela atual para uma nova janela
+	 * O geckodriver n√£o suporta os Actions Handlers.
+	 * Este m√©todo, portanto, alterna o handler da janela atual para uma nova janela
 	 * que eventualmente seja aberta durante os testes.
 	 * 
-	 * @param tituloJanela tÌtulo da nova janela, identificado durante
-	 * as configuraÁıes dos cen·rios de teste.
+	 * @param tituloJanela t√≠tulo da nova janela, identificado durante
+	 * as configura√ß√µes dos cen√°rios de teste.
 	 * <p>
-	 * @author victor.teixeira@receita.pb.gov.br
-	 * @author vhsilvat@indracompany.com
+	 * @author ...
+	 * @author ...
 	 */
 	public void alternarEntreDuasJanela(String tituloJanela) {
 		
@@ -54,14 +54,14 @@ public class Utils extends PageObject {
 	}
 	
 	/**
-	 * O geckodriver n„o suporta os Actions Handlers.
-	 * Este mÈtodo, portanto, alterna o handler da janela atual para uma nova janela
+	 * O geckodriver n√£o suporta os Actions Handlers.
+	 * Este m√©todo, portanto, alterna o handler da janela atual para uma nova janela
 	 * que eventualmente seja aberta durante os testes.
 	 * 
-	 * Este mÈtodo n„o utiliza o nome da janela para alternaÁ„o.
+	 * Este m√©todo n√£o utiliza o nome da janela para alterna√ß√£o.
 	 * <p>
-	 * @author victor.teixeira@receita.pb.gov.br
-	 * @author vhsilvat@indracompany.com
+	 * @author ...
+	 * @author ...
 	 */
 	@SuppressWarnings("unused")
 	public void alternarJanelasAutomaticamente() {
@@ -76,13 +76,13 @@ public class Utils extends PageObject {
 	}
 	
 	/**
-	 * MÈtodo para capturar os popups de erro durante a execuÁ„o dos testes.
+	 * M√©todo para capturar os popups de erro durante a execu√ß√£o dos testes.
 	 * 
 	 * @param mensagemEsperada compara a mensagem de erro esperada com a mensagem 
-	 * de alerta capturada pelo mÈtodo.
+	 * de alerta capturada pelo m√©todo.
 	 * <p>
-	 * @author victor.teixeira@receita.pb.gov.br
-	 * @author vhsilvat@indracompany.com
+	 * @author ...
+	 * @author ...
 	 */ 
 	public void capturarPopup(String mensagemEsperada) {
 		
@@ -95,7 +95,7 @@ public class Utils extends PageObject {
 		WebElement value = getDriver().findElement(By.xpath("/html/body/div/h2"));
 		value.getText();
 		
-		System.out.println("ERRO DURANTE A EXECU«√O:");
+		System.out.println("ERRO DURANTE A EXECU√á√ÉO:");
 		System.out.println("------------------------");
 		System.out.println(value);
 	}
