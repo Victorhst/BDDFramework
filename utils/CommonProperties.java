@@ -8,8 +8,8 @@ import java.util.Properties;
  * Classe utilitária em conjunto com as properties.
  * Define as URLs do ATF e configurações do testlink. 
  * 
- * @author victor.teixeira@receita.pb.gov.br
- * @author vhsilvat@indracompany.com
+ * @author ...
+ * @author ...
  */
 public class CommonProperties {
 	
