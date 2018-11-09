@@ -7,54 +7,54 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 /**
- * Classe respons·vel por executar os testes descritos nas features 
- * do Cucumber. A execuÁ„o sÛ È possÌvel por meio da anotaÁ„o "CucumberOptions",
+ * Classe respons√°vel por executar os testes descritos nas features 
+ * do Cucumber. A execu√ß√£o s√≥ √© poss√≠vel por meio da anota√ß√£o "CucumberOptions",
  * onde:
  * <ul>
- * <li>@feature = caminho do projeto onde est„o descritas as features, com os scripts de teste.
- * <li>@glue = caminho do projeto onde est„o os packages com os codigos para a execuÁ„o dos scripts.
- * <li>@plugin = nesse contexto È utilizado o plugin "pretty", que prove
+ * <li>@feature = caminho do projeto onde est√£o descritas as features, com os scripts de teste.
+ * <li>@glue = caminho do projeto onde est√£o os packages com os codigos para a execu√ß√£o dos scripts.
+ * <li>@plugin = nesse contexto √© utilizado o plugin "pretty", que prove
  * um output verboso no console de quantos scenarios e steps foram executados,
- * e seus possÌveis erros durante a execuÁ„o.
+ * e seus poss√≠veis erros durante a execu√ß√£o.
  * <li>@tags = tags de identificacao das features
  * </ul>
  * <p>
- * Cada feature possui uma gama de tags identificadoras. A combinaÁ„o 
- * delas permite a execuÁ„o de testes mais amplos
+ * Cada feature possui uma gama de tags identificadoras. A combina√ß√£o 
+ * delas permite a execu√ß√£o de testes mais amplos
  * e abrangentes, ou testes mais afunilados e precisos. Tomando como exemplo
  * a feature "ConsultarCargo", temos as seguintes tags:
  * <ul>
- * <li>@RecursosHumanos = executa todos os testes do mÛdulo de Recursos Humanos do ATF.
+ * <li>@RecursosHumanos = executa todos os testes do m√≥dulo de Recursos Humanos do ATF.
  * <li>@TabelasBasicas = executa todos os testes das funcionalidades de
- * Tabelas B·sicas, dentro do mÛdulo de Recursos Humanos.
+ * Tabelas B√°sicas, dentro do m√≥dulo de Recursos Humanos.
  * <li>@Consultar = executa todos os testes das funcionalidades de "Consultar".
  * <li>@Cargo = executa todos os testes das funcionalidades de cargo (incluir, consultar, alterar e excluir)
  * <li>@ConsultarCargo = executa especificamente o teste de funcionalidade "Consultar Cargo".
- * <li>@FluxoBasico = executa o fluxo b·sico do caso de uso da funcionalidade em quest„o.
- * <li>@FluxoAlternativo = executa os fluxos alternativos da funcionalidade em quest„o.
- * <li>@A2 = cada fluxo alternativo diferente È tageado como "A1, A2, A3" e assim por diante.
+ * <li>@FluxoBasico = executa o fluxo b√°sico do caso de uso da funcionalidade em quest√£o.
+ * <li>@FluxoAlternativo = executa os fluxos alternativos da funcionalidade em quest√£o.
+ * <li>@A2 = cada fluxo alternativo diferente √© tageado como "A1, A2, A3" e assim por diante.
  * </ul>
  * <p>
- * Para realizar as combinaÁıes, È preciso separar as tags por vÌrgulas e aspas.
- * Aglomerar todas as tags dentro de uma sÛ aspas representa um cen·rio OR, ao passo que
- * separar as tags por aspas representa um cen·rio AND. … possivel ainda excluir determinadas
- * features ou scenarios utilizando o sÌmbolo "~". Seguem exemplos:
+ * Para realizar as combina√ß√µes, √© preciso separar as tags por v√≠rgulas e aspas.
+ * Aglomerar todas as tags dentro de uma s√≥ aspas representa um cen√°rio OR, ao passo que
+ * separar as tags por aspas representa um cen√°rio AND. √â possivel ainda excluir determinadas
+ * features ou scenarios utilizando o s√≠mbolo "~". Seguem exemplos:
  * <ul>
- * <li>tags = { "@ConsultarCargo", "@E1" } (executa apenas o fluxo de exceÁ„o marcados como E1
+ * <li>tags = { "@ConsultarCargo", "@E1" } (executa apenas o fluxo de exce√ß√£o marcados como E1
  * da funcionalidade consultar cargo.)
- * <li>tags = { "@Cargo", "FluxoExcecao" } (executa todos os fluxos de exceÁ„o da funcionalidade
+ * <li>tags = { "@Cargo", "FluxoExcecao" } (executa todos os fluxos de exce√ß√£o da funcionalidade
  * tageada como "cargo" [incluir, consultar, alterar, incluir]).
- * <li>tags = { "@Cargo", "@E1", "~@Alterar" } (executa os fluxos de exceÁ„o, exceto o
+ * <li>tags = { "@Cargo", "@E1", "~@Alterar" } (executa os fluxos de exce√ß√£o, exceto o
  * fluxo de "alterar".)
  * funcionalidade.
  * <li>tags = { "@TabelasBasicas", "~@Escolaridade" } (executa todos os testes 
- * do mÛdulo Tabelas B·sicas, exceto a funcionalidade "Escolaridade".)
+ * do m√≥dulo Tabelas B√°sicas, exceto a funcionalidade "Escolaridade".)
  * <li>tags = { "@RecursosHumanos" } (executa TODOS os testes de TODAS as funcionalidades
- * do mÛdulo de recursos humanos.
+ * do m√≥dulo de recursos humanos.
  * </ul>
  * <p>
- * @author victor.teixeira@receita.pb.gov.br
- * @author vhsilvat@indracompany.com
+ * @author ...
+ * @author ...
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
