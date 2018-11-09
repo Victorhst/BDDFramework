@@ -5,10 +5,11 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Classe utilitária em conjunto com as properties.
- * Define as URLs do ATF e configurações do testlink. 
+ * Classe utilitÃ¡ria em conjunto com as properties.
+ * Define as URLs do ATF e configuraÃ§Ãµes do testlink. 
  * 
- * @author jefferson.bessa
+ * @author victor.teixeira@receita.pb.gov.br
+ * @author vhsilvat@indracompany.com
  */
 public class CommonProperties {
 	
@@ -36,7 +37,7 @@ public class CommonProperties {
 	}
 	
 	/**
-	 * Método para pegar o valor de alguma propriedade no arquivo de properties.
+	 * MÃ©todo para pegar o valor de alguma propriedade no arquivo de properties.
 	 * O caminho e o nome do arquivo pode ser trocados.
 	 */
 	private static String get(String name) {
